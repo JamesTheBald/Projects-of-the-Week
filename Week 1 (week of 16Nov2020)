@@ -1,0 +1,53 @@
+let numbers1 = [3,2,9];
+let numbers2 = [1,2];
+
+function addArrays(numbers1,numbers2) {
+
+   let joined1 = numbers1.join("");
+   num1 = Number(joined1);
+
+   let joined2 = numbers2.join("");
+   num2 = Number(joined2);
+   
+   let sum_number = num1 + num2;
+   let sum_string = String(sum_number);
+   let sum_array = sum_string.split("");
+
+   return sum_array;
+}
+
+
+function addArrays_verbose(numbers1,numbers2) {
+
+   let joined1 = numbers1.join("");
+   console.log ("joined1 = ", joined1, "and is of type", typeof joined1);
+   
+   num1 = Number(joined1);
+   console.log ("num1 = ", num1, " and is of type", typeof num1);
+   console.log ()
+
+
+   let joined2 = numbers2.join("");
+   console.log ("joined2 = ", joined2, " and is of type", typeof joined2);
+   
+   num2 = Number(joined2);
+   console.log ("num2 = ", num2, " and is of type", typeof num2);
+   console.log ()
+
+
+   let sum_number = num1 + num2;
+   console.log ("sum_number = ", sum_number, " and is of type", typeof sum_number);
+
+   let sum_string = String(sum_number);
+   console.log ("sum_string = ", sum_string, " and is of type", typeof sum_string);
+   
+   let sum_array = sum_string.split("");
+   console.log ("sum_array = ", sum_array, " and is of type", typeof sum_array);
+   console.log ("The first element of this array is ",sum_array[0], ", which is of type",typeof sum_array[0])   
+
+   return sum_array;
+}
+
+
+console.log(addArrays(numbers1, numbers2));
+console.log(addArrays_verbose(numbers1, numbers2));
